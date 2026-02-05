@@ -1,4 +1,4 @@
-import json
+
 import random
 class Game:
     def __init__(self):
@@ -18,19 +18,19 @@ class Game:
         self.AI_used_graphic = []
         # cards_number to jest słownik w którym przechowywana jest liczba kart danego rodzaju, potrzebne do losowania kart i sprawdzania czy dana karta jest jeszcze dostępna
         self.cards_number = {
-            "A":100,
-            "K":0,
-            "Q":0,
-            "J":0,
-            "10":0,
+            "A":4,
+            "K":4,
+            "Q":4,
+            "J":4,
+            "10":4,
             "9":4,
-            "8":0,
-            "7":0,
-            "6":0,
+            "8":4,
+            "7":4,
+            "6":4,
             "5":4,
-            "4":0,
-            "3":0,
-            "2":0
+            "4":4,
+            "3":4,
+            "2":4
         }
         # cards_value to jest słownik w którym przechowywana jest wartość punktowa danej karty, potrzebne do liczenia punktów
         self.cards_value = {
