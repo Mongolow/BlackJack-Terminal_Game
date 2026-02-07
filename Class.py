@@ -143,7 +143,6 @@ class Game:
         self.player_graphics_1 = ['┌─────────┐ ┌─────────┐',f'│{self.player_cards[0]}       │ │{self.player_cards[1]}        │','│         │ │         │','│         │ │         │',f'│       {self.player_cards[0]}│ │        {self.player_cards[1]}│','└─────────┘ └─────────┘']
         self.player_graphics_2 = ['┌─────────┐ ┌─────────┐',f'│{self.player_cards[0]}        │ │{self.player_cards[1]}       │','│         │ │         │','│         │ │         │',f'│        {self.player_cards[0]}│ │       {self.player_cards[1]}│','└─────────┘ └─────────┘']
         self.player_graphics_3 = ['┌─────────┐ ┌─────────┐',f'│{self.player_cards[0]}       │ │{self.player_cards[1]}       │','│         │ │         │','│         │ │         │',f'│       {self.player_cards[0]}│ │       {self.player_cards[1]}│','└─────────┘ └─────────┘']
-        print('\n\n')
         if self.player_cards[0] == '10' and self.player_cards[1] != '10':
             self.player_used_graphic = self.player_graphics_1
             for line in self.player_graphics_1:
@@ -219,7 +218,6 @@ class Game:
             self.player_used_graphic[3] = self.player_used_graphic[3] + ' │         │'
             self.player_used_graphic[4] = self.player_used_graphic[4] + f' │        {self.player_cards[len(self.player_cards)-1]}│'
             self.player_used_graphic[5] = self.player_used_graphic[5] + ' └─────────┘'
-        print('\n\n')
         for line in self.AI_used_graphic:
             print(line)
         print('\n\n')
@@ -304,7 +302,6 @@ class Game:
                 self.AI_used_graphic[3] = self.AI_used_graphic[3] + ' │         │'
                 self.AI_used_graphic[4] = self.AI_used_graphic[4] + f' │        {self.Ai_cards[len(self.Ai_cards)-1]}│'
                 self.AI_used_graphic[5] = self.AI_used_graphic[5] + ' └─────────┘'
-        print('\n\n')
         for line in self.AI_used_graphic:
             print(line)
         print('\n\n')
