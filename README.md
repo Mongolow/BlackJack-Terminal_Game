@@ -9,7 +9,7 @@ This is a lightweight command-line Blackjack game. Players can play rounds again
 ## Features
 
 - Play Blackjack from the terminal
-- Simple betting and score tracking persisted in `high_score.txt`
+- Simple betting and score tracking persisted in `high_score.bytes`
 - Rules implemented in `game_rules.py` and game flow in `main.py`
 
 ## Requirements
@@ -21,7 +21,7 @@ This is a lightweight command-line Blackjack game. Players can play rounds again
 - `main.py` — game entry point
 - `Class.py` — game classes and data structures
 - `game_rules.py` — Blackjack rules and helper logic
-- `high_score.txt` — persisted high score data
+- `high_score.bytes` — persisted high score data
 
 ## Installation
 
@@ -43,7 +43,7 @@ Run the game with:
 python3 main.py
 ```
 
-Follow on-screen prompts to place bets, hit, stand, and view scores. High scores are saved to `high_score.txt` in the project folder.
+Follow on-screen prompts to place bets, hit, stand, and view scores. High scores are saved to `high_score.bytes` in the project folder.
 
 ## Game Rules (Quick)
 
