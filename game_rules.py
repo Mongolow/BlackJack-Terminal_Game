@@ -65,7 +65,7 @@ def game(stake: int):
                 return ['YOU LOST',0]
             else:
                 return ['DRAW',stake]
-        else:
+        if choice not in [1,2,3] or (choice == 3 and counter != 0):
             print('WRONG INPUT')
 
 

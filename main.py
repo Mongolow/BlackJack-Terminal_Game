@@ -3,8 +3,9 @@ import game_rules
 import os
 import time
 while True:
-    with open('high_score.txt', 'r') as f:
-        high_score = int(f.read())
+    with open('high_score.bytes', 'rb') as f:
+        high_score = f.read().decode('utf-8')
+        high_score = int(high_score) if high_score else 0
     os.system('clear')
     print('--------------------------')
     print('       BLACK JACK')
@@ -18,8 +19,10 @@ while True:
         money = 1000
         while True:
             if money > high_score:
-                with open('high_score.txt', 'w') as f:
-                    f.write(str(money))
+                money2 = money
+                money2 = str(money2).encode('utf-8')
+                with open('high_score.bytes', 'wb') as f:
+                    f.write(money2)
             os.system('clear')
             print('------------------------')
             print(f'Money in bank: {money}')
