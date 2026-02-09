@@ -18,12 +18,34 @@ def game(stake: int):
         if has_ace:
             return points > 21 and points_alt > 21
         return points > 21
+    counter = 0
     while True:
-        choice = int(input('\n1. STAND\n2. HIT\n'))
+        if counter == 0:
+            choice = int(input('\n1. STAND\n2. HIT\n3. DOUBLE DOWN\n'))
+        else:
+            choice = int(input('\n1. STAND\n2. HIT\n'))
+        if choice == 3 and counter == 0:
+            os.system('clear')
+            game.draw_card()
+            os.system('clear')
+            game.pass_()
+            if is_bust(game.player_points, game.player_points_alt, game.is_A_in_player_cards):
+                return ['YOU LOST',0]
+            if is_bust(game.AI_points, game.AI_points_alt, game.is_A_in_AI_cards):
+                return ['YOU WIN',stake*4]
+            player_best = best_score(game.player_points, game.player_points_alt, game.is_A_in_player_cards)
+            ai_best = best_score(game.AI_points, game.AI_points_alt, game.is_A_in_AI_cards)
+            if player_best > ai_best:
+                return ['YOU WIN',stake*4]
+            elif player_best < ai_best:
+                return ['YOU LOST',0]
+            else:
+                return ['DRAW',stake]
         if choice == 2:
             # przegrana podczas dobierania
             os.system('clear')
             game.draw_card()
+            counter += 1
             if is_bust(game.player_points, game.player_points_alt, game.is_A_in_player_cards):
                 return ['YOU LOST',0]
         if choice == 1:
@@ -43,6 +65,8 @@ def game(stake: int):
                 return ['YOU LOST',0]
             else:
                 return ['DRAW',stake]
+        else:
+            print('WRONG INPUT')
 
 
 

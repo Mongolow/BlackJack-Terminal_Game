@@ -99,6 +99,7 @@ class Game:
             self.AI_used_graphic = self.AI_graphics
             for line in self.AI_graphics:
                 print(line)
+        print('\n\n')
         # Player draws two cards
         for g in range(0,2):
             while len(self.player_cards)<2:
@@ -316,5 +317,3 @@ class Game:
             print(f'\n points: {self.player_points}\n AI points: {self.AI_points}/{self.AI_points_alt}')
         else:
             print(f'\n points: {self.player_points}\n AI points: {self.AI_points}')
-
-   
